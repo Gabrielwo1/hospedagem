@@ -895,6 +895,207 @@ input, select, textarea { font-family:inherit; }
   border: none; cursor: pointer;
 }
 
+/* ── Greeting Header (personalizado, scrollável) ─────── */
+.greeting-header {
+  padding: 14px var(--page-px);
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface);
+}
+.greeting-avatar {
+  width: 48px; height: 48px; border-radius: var(--r-full);
+  background: var(--surface-3);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; border: 1.5px solid var(--border);
+  overflow: hidden; color: var(--subtle);
+}
+.greeting-info { flex: 1; min-width: 0; }
+.greeting-name {
+  font-size: 16px; font-weight: 600; color: var(--ink);
+  margin-bottom: 6px; letter-spacing: -.1px;
+}
+.greeting-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip-wallet {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: #DCFCE7; color: #15803D;
+  border-radius: var(--r-full); padding: 4px 10px;
+  font-size: 12px; font-weight: 700;
+}
+.chip-points {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: #DBEAFE; color: #1D4ED8;
+  border-radius: var(--r-full); padding: 4px 10px;
+  font-size: 12px; font-weight: 700;
+}
+.notif-btn {
+  width: 40px; height: 40px; border-radius: var(--r-full);
+  background: var(--surface-2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; flex-shrink: 0; color: var(--ink-3);
+  cursor: pointer; transition: background .15s;
+}
+.notif-btn:hover { background: var(--surface-3); }
+.notif-dot {
+  width: 8px; height: 8px; background: var(--red);
+  border-radius: var(--r-full); position: absolute;
+  top: 7px; right: 7px; border: 1.5px solid var(--surface);
+}
+
+/* ── Brand Strip (logo no topo) ──────────────────────── */
+.brand-strip {
+  display: flex; align-items: center;
+  padding: 14px var(--page-px) 0;
+  background: var(--surface);
+}
+.brand-logo { height: 32px; width: auto; object-fit: contain; }
+.brand-logo-svg {
+  display: flex; align-items: center; gap: 8px;
+}
+.brand-mark {
+  width: 32px; height: 32px; border-radius: var(--r-full);
+  background: linear-gradient(135deg, #1a0080, var(--p));
+  color: #fff; font-size: 17px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: -1px; flex-shrink: 0;
+}
+.brand-text { font-size: 17px; font-weight: 800; color: var(--p); letter-spacing: -.4px; }
+.brand-text span { font-size: 9px; font-weight: 600; color: var(--muted); display: block; letter-spacing: .5px; text-transform: uppercase; margin-top: -1px; }
+
+/* ── Hero Search Banner ───────────────────────────────── */
+.hero-banner {
+  position: relative; height: 270px; overflow: visible;
+}
+.hero-banner > img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero-search-card {
+  position: absolute; bottom: -28px;
+  left: var(--page-px); right: var(--page-px);
+  background: var(--surface); border-radius: var(--r-2xl);
+  padding: 14px 16px; box-shadow: var(--s-4);
+  display: flex; align-items: center; gap: 12px;
+  cursor: pointer; z-index: 10;
+  border: .5px solid rgba(15,23,42,.06);
+  transition: box-shadow .2s, transform .15s;
+}
+.hero-search-card:hover { box-shadow: 0 24px 56px rgba(15,23,42,.18); transform: translateY(-1px); }
+.hsc-body { flex: 1; }
+.hsc-main { font-size: 17px; font-weight: 800; color: var(--ink); letter-spacing: -.2px; }
+.hsc-sub { font-size: 13px; color: var(--subtle); margin-top: 3px; }
+.hsc-btn {
+  width: 42px; height: 42px; background: var(--red);
+  border-radius: var(--r-full); display: flex;
+  align-items: center; justify-content: center;
+  flex-shrink: 0; color: #fff; border: none; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255,45,85,.4); transition: all .15s;
+}
+.hsc-btn:hover { background: #e0183a; transform: scale(1.05); }
+
+/* ── Category Icon Strip ─────────────────────────────── */
+.icon-cat-strip {
+  display: flex; gap: 12px; overflow-x: auto;
+  padding: 0 var(--page-px); scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.icon-cat-strip::-webkit-scrollbar { display: none; }
+.icon-cat {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 7px; flex-shrink: 0; cursor: pointer;
+  transition: opacity .15s;
+}
+.icon-cat:active { opacity: .7; }
+.icon-cat-circle {
+  width: 60px; height: 60px; border-radius: var(--r-full);
+  border: 1.5px dashed #D1D5DB; background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; transition: all .15s; box-shadow: var(--s-1);
+}
+.icon-cat:hover .icon-cat-circle,
+.icon-cat.active .icon-cat-circle {
+  border-style: solid; border-color: var(--red); background: #FFF1F3;
+}
+.icon-cat-label {
+  font-size: 11px; font-weight: 600; color: var(--ink-3); white-space: nowrap;
+}
+
+/* ── Full-Width Property Card ────────────────────────── */
+.prop-card {
+  background: var(--surface); border-radius: var(--r-xl);
+  overflow: hidden; box-shadow: var(--s-2);
+  margin: 0 var(--page-px) 16px; cursor: pointer;
+  border: 1px solid var(--border-2);
+  transition: transform .2s, box-shadow .2s;
+}
+.prop-card:hover { transform: translateY(-2px); box-shadow: var(--s-3); }
+
+.prop-carousel { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.pc-track {
+  display: flex; width: 100%; height: 100%;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.pc-track::-webkit-scrollbar { display: none; }
+.pc-track img {
+  width: 100%; height: 100%; flex-shrink: 0;
+  scroll-snap-align: start; object-fit: cover;
+}
+.pc-dots {
+  position: absolute; bottom: 10px; left: 50%;
+  transform: translateX(-50%); display: flex; gap: 4px;
+  z-index: 2; pointer-events: none;
+}
+.pc-dot {
+  width: 6px; height: 6px; border-radius: var(--r-full);
+  background: rgba(255,255,255,.5); transition: all .25s; flex-shrink: 0;
+}
+.pc-dot.active { background: #fff; width: 16px; }
+.pc-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 30px; height: 30px; background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px); border-radius: var(--r-full);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--s-2); border: none; cursor: pointer;
+  color: var(--ink); font-size: 13px; font-weight: 700;
+}
+.pc-arrow.prev { left: 10px; }
+.pc-arrow.next { right: 10px; }
+.pc-heart {
+  position: absolute; top: 12px; right: 12px; z-index: 3;
+  width: 36px; height: 36px; background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px); border-radius: var(--r-full);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--s-1); border: none; cursor: pointer;
+  font-size: 18px; color: var(--subtle); transition: all .2s;
+}
+.pc-heart.liked { background: var(--p); color: #fff; }
+
+.prop-body { padding: 16px 18px; }
+.prop-name {
+  font-size: 20px; font-weight: 800; letter-spacing: -.4px;
+  color: var(--ink); margin-bottom: 4px;
+}
+.prop-location { font-size: 13px; color: var(--muted); margin-bottom: 2px; }
+.prop-capacity { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+.prop-rating-row {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+}
+.prop-score {
+  width: 40px; height: 40px; background: var(--p); color: #fff;
+  border-radius: var(--r-full); display: flex; align-items: center;
+  justify-content: center; font-size: 13px; font-weight: 900;
+  flex-shrink: 0; letter-spacing: -.2px;
+}
+.prop-score-label { font-size: 14px; font-weight: 700; color: var(--p); margin-bottom: 1px; }
+.prop-score-count { font-size: 12px; color: var(--p); opacity: .75; }
+.prop-divider { height: 1px; background: var(--border-2); }
+.prop-price-area { padding-top: 12px; }
+.prop-price {
+  font-size: 28px; font-weight: 900; color: var(--red);
+  letter-spacing: -.5px; line-height: 1.1;
+}
+.prop-price-unit { font-size: 12px; color: var(--muted); margin-top: 2px; margin-bottom: 6px; }
+.prop-price-total { font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+.prop-price-note { font-size: 11px; color: var(--muted); }
+
 /* ── Divider ─────────────────────────────────────────── */
 .divider { height:8px; background:var(--surface-3); }
 .divider-line { height:1px; background:var(--border-2); margin:0 var(--page-px); }

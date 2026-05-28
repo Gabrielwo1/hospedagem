@@ -8,269 +8,265 @@
 </head>
 <body>
 
-<header class="app-header">
-  <div class="app-logo">
-    <span class="app-logo-name">5S Hospedagem</span>
-    <span class="app-logo-sub">Descubra o Brasil</span>
-  </div>
-  <button class="icon-btn">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-  </button>
-  <button class="avatar-btn">S</button>
-</header>
+<main class="app-content no-header">
 
-<main class="app-content">
-
-  <!-- Search Pill -->
-  <div style="padding:16px 16px 0;">
-    <div class="search-pill" onclick="location.href='roteiros.html'">
-      <span class="sp-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      </span>
-      <div class="sp-body">
-        <span class="sp-main">Para onde você vai?</span>
-        <span class="sp-sub">Qualquer destino · Qualquer data</span>
-      </div>
-      <div class="sp-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
-      </div>
+  <!-- Brand Strip -->
+  <div class="brand-strip">
+    <img src="logo.png" alt="5S Hospedagem" class="brand-logo"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="brand-logo-svg" style="display:none;">
+      <div class="brand-mark">5</div>
+      <div class="brand-text">hospedagem <span>brasil</span></div>
     </div>
   </div>
 
-  <!-- Category Chips -->
-  <div style="padding:16px 0 4px;">
-    <div class="chip-row">
-      <button class="chip active" onclick="filterChip(this)">🗺️ Todos</button>
-      <button class="chip" onclick="filterChip(this)">🏖️ Praia</button>
-      <button class="chip" onclick="filterChip(this)">🏔️ Serra</button>
-      <button class="chip" onclick="filterChip(this)">🌿 Natureza</button>
-      <button class="chip" onclick="filterChip(this)">🏛️ Histórico</button>
-      <button class="chip" onclick="filterChip(this)">🍽️ Gastronomia</button>
-      <button class="chip" onclick="filterChip(this)">🎭 Cultura</button>
+  <!-- Greeting Header -->
+  <div class="greeting-header">
+    <div class="greeting-avatar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </div>
+    <div class="greeting-info">
+      <div class="greeting-name">Olá, Josué Ribeiro</div>
+      <div class="greeting-chips">
+        <span class="chip-wallet">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          R$ 120,00
+        </span>
+        <span class="chip-points">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          1.250 Pontos
+        </span>
+      </div>
+    </div>
+    <button class="notif-btn" aria-label="Notificações">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+      </svg>
+      <span class="notif-dot"></span>
+    </button>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner">
+    <img src="https://picsum.photos/seed/brazil-beach-hero/800/540" alt="Destinos incríveis no Brasil">
+    <div class="hero-search-card" onclick="location.href='roteiros.html'">
+      <div class="hsc-body">
+        <div class="hsc-main">Para onde vamos?</div>
+        <div class="hsc-sub">Insira as datas · 1 hóspede</div>
+      </div>
+      <button class="hsc-btn" aria-label="Buscar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <!-- Destinos em Alta -->
-  <section class="section" style="padding-top:16px;">
-    <div class="section-hd">
-      <span class="section-hd-title">Destinos em alta ✨</span>
-      <a href="roteiros.html" class="section-hd-link">Ver todos</a>
+  <!-- Category Icons -->
+  <div style="padding: 44px 0 20px;">
+    <div class="icon-cat-strip">
+      <div class="icon-cat active" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🏨</div>
+        <span class="icon-cat-label">Hotéis</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🏠</div>
+        <span class="icon-cat-label">Pousadas</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🏡</div>
+        <span class="icon-cat-label">Casas</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🏢</div>
+        <span class="icon-cat-label">Apartamentos</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🛏️</div>
+        <span class="icon-cat-label">Hostel</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🌊</div>
+        <span class="icon-cat-label">Resort</span>
+      </div>
+      <div class="icon-cat" onclick="selectCat(this)">
+        <div class="icon-cat-circle">🏕️</div>
+        <span class="icon-cat-label">Camping</span>
+      </div>
     </div>
-    <div class="dest-scroll">
+  </div>
 
-      <a href="roteiro-detalhe.html" style="display:contents">
-      <div class="dest-card">
-        <img src="https://picsum.photos/seed/camposjordao/480/320" alt="Campos do Jordão">
-        <button class="heart">♡</button>
-        <div class="dest-card-body">
-          <div class="dc-state">São Paulo</div>
-          <h3>Campos do Jordão</h3>
-          <div class="dc-meta">
-            <span class="dc-offers"><strong>23</strong> ofertas</span>
-            <span class="dc-dist">raio 20km</span>
-          </div>
-        </div>
+  <!-- Section header -->
+  <div class="section-hd" style="padding:0 var(--page-px) 16px;">
+    <span class="section-hd-title">Hospedagens em destaque</span>
+    <a href="roteiros.html" class="section-hd-link">Ver todos</a>
+  </div>
+
+  <!-- Property Card 1 -->
+  <a href="roteiro-detalhe.html" style="display:block;">
+  <div class="prop-card">
+    <div class="prop-carousel" id="pc1">
+      <div class="pc-track" id="track1">
+        <img src="https://picsum.photos/seed/recife-vila/800/450" alt="Vila na Praia">
+        <img src="https://picsum.photos/seed/recife-vila-2/800/450" alt="Vila na Praia">
+        <img src="https://picsum.photos/seed/recife-vila-3/800/450" alt="Vila na Praia">
       </div>
-      </a>
-
-      <a href="roteiro-detalhe.html" style="display:contents">
-      <div class="dest-card">
-        <img src="https://picsum.photos/seed/bonito-ms/480/320" alt="Bonito">
-        <button class="heart">♡</button>
-        <div class="dest-card-body">
-          <div class="dc-state">Mato Grosso do Sul</div>
-          <h3>Bonito</h3>
-          <div class="dc-meta">
-            <span class="dc-offers"><strong>18</strong> ofertas</span>
-            <span class="dc-dist">raio 20km</span>
-          </div>
-        </div>
+      <div class="pc-dots" id="dots1">
+        <span class="pc-dot active"></span>
+        <span class="pc-dot"></span>
+        <span class="pc-dot"></span>
       </div>
-      </a>
-
-      <a href="roteiro-detalhe.html" style="display:contents">
-      <div class="dest-card">
-        <img src="https://picsum.photos/seed/gramado-rs/480/320" alt="Gramado">
-        <button class="heart">♡</button>
-        <div class="dest-card-body">
-          <div class="dc-state">Rio Grande do Sul</div>
-          <h3>Gramado</h3>
-          <div class="dc-meta">
-            <span class="dc-offers"><strong>31</strong> ofertas</span>
-            <span class="dc-dist">raio 20km</span>
-          </div>
-        </div>
-      </div>
-      </a>
-
-      <a href="roteiro-detalhe.html" style="display:contents">
-      <div class="dest-card">
-        <img src="https://picsum.photos/seed/chapada/480/320" alt="Chapada dos Veadeiros">
-        <button class="heart">♡</button>
-        <div class="dest-card-body">
-          <div class="dc-state">Goiás</div>
-          <h3>Chapada dos Veadeiros</h3>
-          <div class="dc-meta">
-            <span class="dc-offers"><strong>14</strong> ofertas</span>
-            <span class="dc-dist">raio 20km</span>
-          </div>
-        </div>
-      </div>
-      </a>
-
+      <button class="pc-arrow prev" onclick="event.preventDefault(); slideCard('track1','dots1',-1)">‹</button>
+      <button class="pc-arrow next" onclick="event.preventDefault(); slideCard('track1','dots1',1)">›</button>
+      <button class="pc-heart" onclick="event.preventDefault(); toggleHeart(this)">♡</button>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- Roteiros Populares grid -->
-  <section class="section">
-    <div class="section-hd">
-      <span class="section-hd-title">Roteiros populares</span>
-      <a href="roteiros.html" class="section-hd-link">Ver todos</a>
+    <div class="prop-body">
+      <div class="prop-name">Vila na Praia em Recife</div>
+      <div class="prop-location">Recife - PE</div>
+      <div class="prop-capacity">3 unidades · até 4 hóspedes</div>
+      <div class="prop-rating-row">
+        <div class="prop-score">9,6</div>
+        <div>
+          <div class="prop-score-label">Muito Bom</div>
+          <div class="prop-score-count">(65 avaliações)</div>
+        </div>
+      </div>
+      <div class="prop-divider"></div>
+      <div class="prop-price-area">
+        <div class="prop-price">R$ 349</div>
+        <div class="prop-price-unit">por diária</div>
+        <div class="prop-price-total">Total: R$ 6.000,00</div>
+        <div class="prop-price-note">Inclui impostos e taxas</div>
+      </div>
     </div>
-    <div class="exp-grid">
+  </div>
+  </a>
 
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/floripa/400/300" alt="Florianópolis">
-            <img src="https://picsum.photos/seed/floripa-2/400/300" alt="Florianópolis">
-            <img src="https://picsum.photos/seed/floripa-3/400/300" alt="Florianópolis">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat praia">🏖️ Praia</div>
-          <h3>Florianópolis</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">Santa Catarina</div>
-          <div class="exp-rating"><span class="star">★</span> 4.8 · 12 hospedagens</div>
-          <div class="exp-price">R$ 280 <span>/ noite</span></div>
-        </div>
+  <!-- Property Card 2 -->
+  <a href="roteiro-detalhe.html" style="display:block;">
+  <div class="prop-card">
+    <div class="prop-carousel">
+      <div class="pc-track" id="track2">
+        <img src="https://picsum.photos/seed/gramado-chale/800/450" alt="Chalé Gramado">
+        <img src="https://picsum.photos/seed/gramado-chale-2/800/450" alt="Chalé Gramado">
+        <img src="https://picsum.photos/seed/gramado-chale-3/800/450" alt="Chalé Gramado">
       </div>
-      </a>
-
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/olinda-pe/400/300" alt="Olinda">
-            <img src="https://picsum.photos/seed/olinda-2/400/300" alt="Olinda">
-            <img src="https://picsum.photos/seed/olinda-3/400/300" alt="Olinda">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat historico">🏛️ Histórico</div>
-          <h3>Olinda</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">Pernambuco</div>
-          <div class="exp-rating"><span class="star">★</span> 4.7 · 9 hospedagens</div>
-          <div class="exp-price">R$ 190 <span>/ noite</span></div>
-        </div>
+      <div class="pc-dots" id="dots2">
+        <span class="pc-dot active"></span>
+        <span class="pc-dot"></span>
+        <span class="pc-dot"></span>
       </div>
-      </a>
-
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/paraty-rj/400/300" alt="Paraty">
-            <img src="https://picsum.photos/seed/paraty-2/400/300" alt="Paraty">
-            <img src="https://picsum.photos/seed/paraty-3/400/300" alt="Paraty">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat historico">⛵ Histórico</div>
-          <h3>Paraty</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">Rio de Janeiro</div>
-          <div class="exp-rating"><span class="star">★</span> 4.9 · 16 hospedagens</div>
-          <div class="exp-price">R$ 320 <span>/ noite</span></div>
-        </div>
-      </div>
-      </a>
-
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/jericoacoara/400/300" alt="Jericoacoara">
-            <img src="https://picsum.photos/seed/jericoacoara-2/400/300" alt="Jericoacoara">
-            <img src="https://picsum.photos/seed/jericoacoara-3/400/300" alt="Jericoacoara">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat praia">🏄 Praia</div>
-          <h3>Jericoacoara</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">Ceará</div>
-          <div class="exp-rating"><span class="star">★</span> 4.9 · 7 hospedagens</div>
-          <div class="exp-price">R$ 240 <span>/ noite</span></div>
-        </div>
-      </div>
-      </a>
-
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/brotas/400/300" alt="Brotas">
-            <img src="https://picsum.photos/seed/brotas-2/400/300" alt="Brotas">
-            <img src="https://picsum.photos/seed/brotas-3/400/300" alt="Brotas">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat aventura">🌊 Aventura</div>
-          <h3>Brotas</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">São Paulo</div>
-          <div class="exp-rating"><span class="star">★</span> 4.7 · 11 hospedagens</div>
-          <div class="exp-price">R$ 210 <span>/ noite</span></div>
-        </div>
-      </div>
-      </a>
-
-      <a href="roteiro-detalhe.html">
-      <div class="exp-card">
-        <div class="card-carousel">
-          <div class="cc-track">
-            <img src="https://picsum.photos/seed/tiradentes/400/300" alt="Tiradentes">
-            <img src="https://picsum.photos/seed/tiradentes-2/400/300" alt="Tiradentes">
-            <img src="https://picsum.photos/seed/tiradentes-3/400/300" alt="Tiradentes">
-          </div>
-          <div class="cc-dots">
-            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
-          </div>
-          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
-        </div>
-        <div class="exp-body">
-          <div class="exp-cat historico">🏘️ Histórico</div>
-          <h3>Tiradentes</h3>
-          <div style="font-size:11px;color:var(--muted);margin-bottom:5px;">Minas Gerais</div>
-          <div class="exp-rating"><span class="star">★</span> 4.8 · 8 hospedagens</div>
-          <div class="exp-price">R$ 175 <span>/ noite</span></div>
-        </div>
-      </div>
-      </a>
-
+      <button class="pc-arrow prev" onclick="event.preventDefault(); slideCard('track2','dots2',-1)">‹</button>
+      <button class="pc-arrow next" onclick="event.preventDefault(); slideCard('track2','dots2',1)">›</button>
+      <button class="pc-heart" onclick="event.preventDefault(); toggleHeart(this)">♡</button>
     </div>
-  </section>
+    <div class="prop-body">
+      <div class="prop-name">Chalé nas Montanhas de Gramado</div>
+      <div class="prop-location">Gramado - RS</div>
+      <div class="prop-capacity">1 chalé · até 6 hóspedes</div>
+      <div class="prop-rating-row">
+        <div class="prop-score">9,8</div>
+        <div>
+          <div class="prop-score-label">Excepcional</div>
+          <div class="prop-score-count">(142 avaliações)</div>
+        </div>
+      </div>
+      <div class="prop-divider"></div>
+      <div class="prop-price-area">
+        <div class="prop-price">R$ 520</div>
+        <div class="prop-price-unit">por diária</div>
+        <div class="prop-price-total">Total: R$ 3.640,00</div>
+        <div class="prop-price-note">Inclui impostos e taxas</div>
+      </div>
+    </div>
+  </div>
+  </a>
+
+  <!-- Property Card 3 -->
+  <a href="roteiro-detalhe.html" style="display:block;">
+  <div class="prop-card">
+    <div class="prop-carousel">
+      <div class="pc-track" id="track3">
+        <img src="https://picsum.photos/seed/floripa-casa/800/450" alt="Casa Floripa">
+        <img src="https://picsum.photos/seed/floripa-casa-2/800/450" alt="Casa Floripa">
+        <img src="https://picsum.photos/seed/floripa-casa-3/800/450" alt="Casa Floripa">
+      </div>
+      <div class="pc-dots" id="dots3">
+        <span class="pc-dot active"></span>
+        <span class="pc-dot"></span>
+        <span class="pc-dot"></span>
+      </div>
+      <button class="pc-arrow prev" onclick="event.preventDefault(); slideCard('track3','dots3',-1)">‹</button>
+      <button class="pc-arrow next" onclick="event.preventDefault(); slideCard('track3','dots3',1)">›</button>
+      <button class="pc-heart" onclick="event.preventDefault(); toggleHeart(this)">♡</button>
+    </div>
+    <div class="prop-body">
+      <div class="prop-name">Casa de Praia em Florianópolis</div>
+      <div class="prop-location">Florianópolis - SC</div>
+      <div class="prop-capacity">2 casas · até 8 hóspedes</div>
+      <div class="prop-rating-row">
+        <div class="prop-score">9,2</div>
+        <div>
+          <div class="prop-score-label">Ótimo</div>
+          <div class="prop-score-count">(89 avaliações)</div>
+        </div>
+      </div>
+      <div class="prop-divider"></div>
+      <div class="prop-price-area">
+        <div class="prop-price">R$ 280</div>
+        <div class="prop-price-unit">por diária</div>
+        <div class="prop-price-total">Total: R$ 1.960,00</div>
+        <div class="prop-price-note">Inclui impostos e taxas</div>
+      </div>
+    </div>
+  </div>
+  </a>
+
+  <!-- Property Card 4 -->
+  <a href="roteiro-detalhe.html" style="display:block;">
+  <div class="prop-card">
+    <div class="prop-carousel">
+      <div class="pc-track" id="track4">
+        <img src="https://picsum.photos/seed/paraty-pousada/800/450" alt="Pousada Paraty">
+        <img src="https://picsum.photos/seed/paraty-pousada-2/800/450" alt="Pousada Paraty">
+        <img src="https://picsum.photos/seed/paraty-pousada-3/800/450" alt="Pousada Paraty">
+      </div>
+      <div class="pc-dots" id="dots4">
+        <span class="pc-dot active"></span>
+        <span class="pc-dot"></span>
+        <span class="pc-dot"></span>
+      </div>
+      <button class="pc-arrow prev" onclick="event.preventDefault(); slideCard('track4','dots4',-1)">‹</button>
+      <button class="pc-arrow next" onclick="event.preventDefault(); slideCard('track4','dots4',1)">›</button>
+      <button class="pc-heart" onclick="event.preventDefault(); toggleHeart(this)">♡</button>
+    </div>
+    <div class="prop-body">
+      <div class="prop-name">Pousada Colonial em Paraty</div>
+      <div class="prop-location">Paraty - RJ</div>
+      <div class="prop-capacity">5 quartos · até 10 hóspedes</div>
+      <div class="prop-rating-row">
+        <div class="prop-score">9,4</div>
+        <div>
+          <div class="prop-score-label">Muito Bom</div>
+          <div class="prop-score-count">(211 avaliações)</div>
+        </div>
+      </div>
+      <div class="prop-divider"></div>
+      <div class="prop-price-area">
+        <div class="prop-price">R$ 195</div>
+        <div class="prop-price-unit">por diária</div>
+        <div class="prop-price-total">Total: R$ 1.365,00</div>
+        <div class="prop-price-note">Inclui impostos e taxas</div>
+      </div>
+    </div>
+  </div>
+  </a>
+
+  <div style="height: 8px;"></div>
 
 </main>
 
@@ -297,20 +293,36 @@
 </nav>
 
 <script>
-function filterChip(el) {
-  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+function selectCat(el) {
+  document.querySelectorAll('.icon-cat').forEach(c => c.classList.remove('active'));
   el.classList.add('active');
 }
-function initCarousels() {
-  document.querySelectorAll('.cc-track').forEach(track => {
-    const dots = track.closest('.card-carousel').querySelectorAll('.cc-dot');
-    track.addEventListener('scroll', () => {
-      const idx = Math.round(track.scrollLeft / track.offsetWidth);
-      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-    }, { passive: true });
-  });
+
+function slideCard(trackId, dotsId, dir) {
+  const track = document.getElementById(trackId);
+  const w = track.offsetWidth;
+  track.scrollBy({ left: dir * w, behavior: 'smooth' });
+  setTimeout(() => {
+    const idx = Math.round(track.scrollLeft / w);
+    document.getElementById(dotsId).querySelectorAll('.pc-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+  }, 320);
 }
-document.addEventListener('DOMContentLoaded', initCarousels);
+
+function toggleHeart(btn) {
+  btn.classList.toggle('liked');
+  btn.textContent = btn.classList.contains('liked') ? '♥' : '♡';
+}
+
+document.querySelectorAll('.pc-track').forEach((track, ti) => {
+  const carousel = track.closest('.prop-carousel');
+  const dots = carousel.querySelectorAll('.pc-dot');
+  track.addEventListener('scroll', () => {
+    const idx = Math.round(track.scrollLeft / track.offsetWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, { passive: true });
+});
 </script>
 </body>
 </html>
