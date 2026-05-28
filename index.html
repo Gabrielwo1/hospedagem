@@ -8,19 +8,28 @@
 </head>
 <body>
 
-<main class="app-content no-header">
-
-  <!-- Brand Strip -->
-  <div class="brand-strip">
-    <img src="logo.png" alt="5S Hospedagem" class="brand-logo"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="brand-logo-svg" style="display:none;">
-      <div class="brand-mark">5</div>
-      <div class="brand-text">hospedagem <span>brasil</span></div>
+<header class="app-header">
+  <div class="app-logo">
+    <img src="logo.png" alt="5S Hospedagem" class="header-logo-img"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="header-logo-fallback">
+      <div class="header-brand-mark">5</div>
+      <div class="header-brand-text">
+        <span class="header-brand-name">hospedagem</span>
+        <span class="header-brand-sub">brasil</span>
+      </div>
     </div>
   </div>
+  <button class="icon-btn" aria-label="Notificações" style="position:relative;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+    <span style="position:absolute;top:8px;right:8px;width:7px;height:7px;background:var(--red);border-radius:50%;border:1.5px solid #fff;"></span>
+  </button>
+  <div class="avatar-btn">J</div>
+</header>
 
-  <!-- Greeting Header -->
+<main class="app-content">
+
+  <!-- Greeting -->
   <div class="greeting-header">
     <div class="greeting-avatar">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
