@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Voos — 5S Hospedagem</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<main class="app-content no-header">
+
+  <!-- Hero Search -->
+  <div class="voos-hero">
+    <div class="voos-hero-eyebrow">Passagens aéreas</div>
+    <h1>Para onde<br>você vai? ✈️</h1>
+
+    <!-- Tipo de viagem -->
+    <div class="trip-toggle">
+      <button class="tt-btn active" onclick="toggleTrip(this,'volta')">↔ Ida e volta</button>
+      <button class="tt-btn" onclick="toggleTrip(this,'ida')">→ Só ida</button>
+      <button class="tt-btn" onclick="toggleTrip(this,'multi')">⊕ Multi</button>
+    </div>
+
+    <!-- Search Card -->
+    <div class="search-card">
+      <div class="sc-field">
+        <span class="sc-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </span>
+        <div style="flex:1;">
+          <div class="sc-label">Origem</div>
+          <div class="sc-value">Pato Branco (PTO)</div>
+        </div>
+      </div>
+      <div class="sc-field">
+        <span class="sc-icon" style="color:var(--p);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </span>
+        <div style="flex:1;">
+          <div class="sc-label">Destino</div>
+          <div class="sc-value empty">Para onde você vai?</div>
+        </div>
+      </div>
+      <div class="sc-pair">
+        <div class="sc-field">
+          <span class="sc-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          <div style="flex:1;">
+            <div class="sc-label">Ida</div>
+            <div class="sc-value">15 jun</div>
+          </div>
+        </div>
+        <div class="sc-field" id="volta-field">
+          <span class="sc-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
+          <div style="flex:1;">
+            <div class="sc-label">Volta</div>
+            <div class="sc-value">20 jun</div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-field">
+        <span class="sc-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+        <div style="flex:1;">
+          <div class="sc-label">Passageiros e Classe</div>
+          <div class="sc-value">1 pessoa · Econômica</div>
+        </div>
+      </div>
+      <div style="padding:14px 16px;">
+        <a href="voos-resultados.html">
+          <button class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Buscar voos
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Destinos populares -->
+  <section class="section">
+    <div class="section-hd">
+      <span class="section-hd-title">Destinos populares</span>
+    </div>
+    <div class="chip-row">
+      <a href="voos-resultados.html"><button class="chip">✈ Curitiba</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ São Paulo</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ Rio de Janeiro</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ Florianópolis</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ Natal</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ Fortaleza</button></a>
+      <a href="voos-resultados.html"><button class="chip">✈ Manaus</button></a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Promoções -->
+  <section class="section">
+    <div class="section-hd">
+      <span class="section-hd-title">🔥 Passagens em promoção</span>
+      <a href="voos-resultados.html" class="section-hd-link">Ver todas</a>
+    </div>
+    <div class="flight-list px16">
+
+      <a href="voos-resultados.html" style="display:contents">
+      <div class="flight-card best">
+        <div class="flight-best-label">Oferta relâmpago</div>
+        <div class="fl-airline" style="margin-top:10px;">
+          <div class="fl-airline-logo" style="background:var(--p-08);color:var(--p);">AZ</div>
+          <div style="flex:1;">
+            <div class="fl-airline-name">Pato Branco → Curitiba</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Azul · Ida e volta · 15–20 jun</div>
+          </div>
+        </div>
+        <div class="fl-footer" style="padding-top:10px;margin-top:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--subtle);">A partir de</div>
+            <div class="fl-price">R$ 487</div>
+          </div>
+          <button class="btn-fl">Ver →</button>
+        </div>
+      </div>
+      </a>
+
+      <a href="voos-resultados.html" style="display:contents">
+      <div class="flight-card">
+        <div class="fl-airline">
+          <div class="fl-airline-logo" style="background:#fff0f0;color:#c00;">LA</div>
+          <div style="flex:1;">
+            <div class="fl-airline-name">Pato Branco → São Paulo</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">LATAM · Só ida · 23 abr</div>
+          </div>
+        </div>
+        <div class="fl-footer" style="padding-top:10px;margin-top:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--subtle);">A partir de</div>
+            <div class="fl-price">R$ 312</div>
+          </div>
+          <button class="btn-fl">Ver →</button>
+        </div>
+      </div>
+      </a>
+
+      <a href="voos-resultados.html" style="display:contents">
+      <div class="flight-card">
+        <div class="fl-airline">
+          <div class="fl-airline-logo" style="background:#f0f4ff;color:#1d4ed8;">GL</div>
+          <div style="flex:1;">
+            <div class="fl-airline-name">Pato Branco → Rio de Janeiro</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">GOL · Ida e volta · 7–12 abr</div>
+          </div>
+        </div>
+        <div class="fl-footer" style="padding-top:10px;margin-top:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--subtle);">A partir de</div>
+            <div class="fl-price">R$ 730</div>
+          </div>
+          <button class="btn-fl">Ver →</button>
+        </div>
+      </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CTA Assessoria -->
+  <section class="section">
+    <div class="cta-banner">
+      <div style="position:relative;z-index:1;">
+        <div style="font-size:36px;margin-bottom:12px;">🎧</div>
+        <h3 style="font-size:18px;font-weight:800;color:#fff;letter-spacing:-.3px;margin-bottom:8px;">Precisa de ajuda para planejar?</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,.8);line-height:1.65;margin-bottom:18px;">Nosso parceiro cuida de toda a emissão e gestão das passagens com assessoria personalizada.</p>
+        <button style="background:#fff;color:var(--p);border:none;border-radius:var(--r-full);padding:12px 24px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:var(--s-2);">💬 Falar com especialista</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="roteiros.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <span>Roteiros</span>
+  </a>
+  <a href="voos.html" class="bn-item active">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+    </div>
+    <span>Voos</span>
+  </a>
+  <a href="servicos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span>Serviços</span>
+  </a>
+</nav>
+
+<script>
+function toggleTrip(btn, type) {
+  document.querySelectorAll('.tt-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const volta = document.getElementById('volta-field');
+  if (volta) volta.style.opacity = type === 'ida' ? '.4' : '1';
+}
+</script>
+</body>
+</html>

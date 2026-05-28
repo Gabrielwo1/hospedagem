@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campos do Jordão — 5S Hospedagem</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<main class="app-content no-header">
+
+  <!-- Hero do Destino -->
+  <div style="position:relative;height:360px;overflow:hidden;">
+    <img src="https://picsum.photos/seed/camposjordao-wide/800/500" alt="Campos do Jordão" style="width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,23,42,.45) 0%,transparent 40%,rgba(15,23,42,.72) 70%,rgba(15,23,42,.95) 100%);"></div>
+    <div style="position:absolute;top:0;left:0;right:0;z-index:2;display:flex;justify-content:space-between;padding:16px;">
+      <a href="roteiros.html" class="gallery-btn">←</a>
+      <button class="gallery-btn">♡</button>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;right:0;z-index:2;padding:24px;">
+      <div class="hdc-state">São Paulo · 1.628 m de altitude</div>
+      <div class="hdc-title">Campos do Jordão</div>
+      <div class="hdc-meta">
+        <span class="hdc-tag">🏔️ Serra</span>
+        <span class="hdc-tag-white">⭐ 4.9</span>
+        <span class="hdc-tag-white">📍 20km</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resumo -->
+  <div style="padding:20px 16px 16px;background:var(--surface);border-bottom:1px solid var(--border-2);">
+    <div class="row-b" style="margin-bottom:12px;">
+      <div>
+        <h1 style="font-size:22px;font-weight:900;letter-spacing:-.4px;margin-bottom:3px;">Campos do Jordão</h1>
+        <p style="font-size:13px;color:var(--muted);">São Paulo · 167 km de SP</p>
+      </div>
+      <button class="icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+    </div>
+    <span class="radius-badge">📍 23 ofertas em até 20km</span>
+    <p style="font-size:14px;color:var(--ink-3);line-height:1.75;margin-top:14px;">
+      Campos do Jordão é o destino de montanha mais charmoso do Brasil. Com clima europeu, gastronomia sofisticada e paisagens que tiram o fôlego, é perfeito para casais e famílias que buscam descanso com muito estilo.
+    </p>
+  </div>
+
+  <!-- Tab Nav -->
+  <div class="tab-nav" id="tabNav">
+    <button class="tab-btn active" onclick="showTab('sobre', this)">Sobre</button>
+    <button class="tab-btn" onclick="showTab('hospedagens', this)">Hospedagens <span class="tab-count">12</span></button>
+    <button class="tab-btn" onclick="showTab('voos', this)">Voos</button>
+    <button class="tab-btn" onclick="showTab('servicos', this)">Serviços <span class="tab-count">8</span></button>
+  </div>
+
+  <!-- Tab: Sobre -->
+  <div class="tab-panel active" id="tab-sobre">
+
+    <!-- Vídeo placeholder -->
+    <div style="border-radius:var(--r-xl);overflow:hidden;height:196px;position:relative;cursor:pointer;margin-bottom:20px;">
+      <img src="https://picsum.photos/seed/campos-video/800/400" alt="Vídeo" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;background:rgba(15,23,42,.38);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;background:var(--p);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;box-shadow:0 0 0 12px rgba(73,1,251,.18);">▶</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:10px;">Por que visitar?</h3>
+    <p style="font-size:14px;color:var(--ink-3);line-height:1.75;margin-bottom:12px;">
+      Conhecida como a "Suíça Brasileira", Campos do Jordão encanta com suas ruas arborizadas, chalés rústicos e chocolates artesanais. O Palácio Boa Vista, as alamedas de ciprestes e o teleférico são pontos imperdíveis.
+    </p>
+    <p style="font-size:14px;color:var(--ink-3);line-height:1.75;margin-bottom:24px;">
+      Durante o inverno, a temperatura pode chegar a 0°C e geadas são comuns — criando cenários de tirar o fôlego. No Festival de Inverno (julho), a cidade recebe artistas de todo o Brasil.
+    </p>
+
+    <!-- Mapa placeholder -->
+    <h3 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:12px;">Raio de 20km</h3>
+    <div style="border-radius:var(--r-xl);overflow:hidden;height:196px;position:relative;margin-bottom:24px;background:var(--surface-3);">
+      <img src="https://picsum.photos/seed/map-campos/800/400" alt="Mapa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;">
+        <div style="width:150px;height:150px;border:2px dashed var(--p);border-radius:50%;opacity:.55;position:absolute;"></div>
+        <div style="font-size:28px;">📍</div>
+        <div style="font-size:13px;font-weight:700;color:var(--ink-2);">Mapa com raio de 20km</div>
+        <div style="font-size:12px;color:var(--muted);">23 ofertas disponíveis</div>
+      </div>
+    </div>
+
+    <!-- O que fazer -->
+    <h3 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:14px;">O que fazer</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="background:var(--surface);border-radius:var(--r-lg);padding:16px;box-shadow:var(--s-1);border:1px solid var(--border-2);">
+        <div style="font-size:24px;margin-bottom:8px;">🍫</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:-.1px;">Roteiro Gastronômico</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Chocolates e fondue</div>
+      </div>
+      <div style="background:var(--surface);border-radius:var(--r-lg);padding:16px;box-shadow:var(--s-1);border:1px solid var(--border-2);">
+        <div style="font-size:24px;margin-bottom:8px;">🚠</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:-.1px;">Teleférico</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Vista panorâmica</div>
+      </div>
+      <div style="background:var(--surface);border-radius:var(--r-lg);padding:16px;box-shadow:var(--s-1);border:1px solid var(--border-2);">
+        <div style="font-size:24px;margin-bottom:8px;">🏛️</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:-.1px;">Palácio Boa Vista</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Residência oficial</div>
+      </div>
+      <div style="background:var(--surface);border-radius:var(--r-lg);padding:16px;box-shadow:var(--s-1);border:1px solid var(--border-2);">
+        <div style="font-size:24px;margin-bottom:8px;">🎿</div>
+        <div style="font-size:13px;font-weight:700;letter-spacing:-.1px;">Neve Artificial</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Parque Ski Mountain</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Hospedagens -->
+  <div class="tab-panel" id="tab-hospedagens">
+    <div class="chip-row" style="padding:0;margin-bottom:14px;">
+      <button class="chip active" onclick="filterTabChip(this)">Todos</button>
+      <button class="chip" onclick="filterTabChip(this)">Hotel</button>
+      <button class="chip" onclick="filterTabChip(this)">Pousada</button>
+      <button class="chip" onclick="filterTabChip(this)">Chalé</button>
+      <button class="chip" onclick="filterTabChip(this)">Resort</button>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">12 opções em até 20km de Campos do Jordão</p>
+    <div class="hosp-list">
+      <a href="roteiro-detalhe.html">
+      <div class="hosp-card">
+        <img src="https://picsum.photos/seed/hotel-campos1/200/200" alt="Hotel">
+        <div class="hosp-body">
+          <div class="hosp-name">Hotel Villa di Montagna</div>
+          <div class="hosp-type">3,2 km · Pousada · 4 estrelas</div>
+          <div class="hosp-footer">
+            <div class="hosp-rating">★ 4.9 · (128)</div>
+            <div class="hosp-price">R$480<span>/noite</span></div>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="roteiro-detalhe.html">
+      <div class="hosp-card">
+        <img src="https://picsum.photos/seed/hotel-campos2/200/200" alt="Chalé">
+        <div class="hosp-body">
+          <div class="hosp-name">Chalé Capivari Suite</div>
+          <div class="hosp-type">1,8 km · Chalé · Boutique</div>
+          <div class="hosp-footer">
+            <div class="hosp-rating">★ 4.8 · (94)</div>
+            <div class="hosp-price">R$320<span>/noite</span></div>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="roteiro-detalhe.html">
+      <div class="hosp-card">
+        <img src="https://picsum.photos/seed/hotel-campos3/200/200" alt="Pousada">
+        <div class="hosp-body">
+          <div class="hosp-name">Pousada das Orquídeas</div>
+          <div class="hosp-type">6,4 km · Pousada · Familiar</div>
+          <div class="hosp-footer">
+            <div class="hosp-rating">★ 4.7 · (61)</div>
+            <div class="hosp-price">R$210<span>/noite</span></div>
+          </div>
+        </div>
+      </div>
+      </a>
+      <a href="roteiro-detalhe.html">
+      <div class="hosp-card">
+        <img src="https://picsum.photos/seed/hotel-campos4/200/200" alt="Resort">
+        <div class="hosp-body">
+          <div class="hosp-name">Resort Toriba</div>
+          <div class="hosp-type">4,1 km · Resort · Luxo</div>
+          <div class="hosp-footer">
+            <div class="hosp-rating">★ 4.9 · (312)</div>
+            <div class="hosp-price">R$950<span>/noite</span></div>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tab: Voos -->
+  <div class="tab-panel" id="tab-voos">
+    <div style="background:var(--p-08);border-radius:var(--r-lg);padding:14px 16px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start;border:1px solid var(--p-14);">
+      <span style="font-size:20px;">✈️</span>
+      <div>
+        <p style="font-size:13px;font-weight:700;color:var(--p);margin-bottom:3px;">Aeroporto mais próximo</p>
+        <p style="font-size:13px;color:var(--ink-3);line-height:1.5;">São José dos Campos (SJK) — 54 km · ou Congonhas (CGH) · 167 km</p>
+      </div>
+    </div>
+    <h3 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:14px;">Voos disponíveis</h3>
+    <div class="flight-list">
+
+      <div class="flight-card best" onclick="openModal()">
+        <div class="flight-best-label">Melhor opção</div>
+        <div class="fl-airline" style="margin-top:10px;">
+          <div class="fl-airline-logo" style="background:var(--p-08);color:var(--p);">AZ</div>
+          <div class="fl-airline-name">Azul Linhas Aéreas</div>
+        </div>
+        <div class="fl-route">
+          <div style="text-align:left;">
+            <div class="fl-time">07:30</div>
+            <div style="font-size:11px;color:var(--muted);">PTO</div>
+          </div>
+          <div class="fl-mid">
+            <div class="fl-duration">1h 45min</div>
+            <div class="fl-mid-line"></div>
+            <div class="fl-direct">Direto</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="fl-time">09:15</div>
+            <div style="font-size:11px;color:var(--muted);">SJK</div>
+          </div>
+        </div>
+        <div class="fl-footer">
+          <div>
+            <div class="fl-price">R$ 487</div>
+            <div class="fl-price-note">por pessoa · ida e volta</div>
+          </div>
+          <button class="btn-fl" onclick="event.stopPropagation();openModal()">Ver voo</button>
+        </div>
+      </div>
+
+      <div class="flight-card" onclick="openModal()">
+        <div class="fl-airline">
+          <div class="fl-airline-logo" style="background:#fff0f0;color:#c00;">LA</div>
+          <div class="fl-airline-name">LATAM Airlines</div>
+        </div>
+        <div class="fl-route">
+          <div style="text-align:left;">
+            <div class="fl-time">13:50</div>
+            <div style="font-size:11px;color:var(--muted);">PTO</div>
+          </div>
+          <div class="fl-mid">
+            <div class="fl-duration">2h 20min</div>
+            <div class="fl-mid-line"></div>
+            <div class="fl-stop">1 escala</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="fl-time">16:10</div>
+            <div style="font-size:11px;color:var(--muted);">CGH</div>
+          </div>
+        </div>
+        <div class="fl-footer">
+          <div>
+            <div class="fl-price">R$ 612</div>
+            <div class="fl-price-note">por pessoa · ida e volta</div>
+          </div>
+          <button class="btn-fl" onclick="event.stopPropagation();openModal()">Ver voo</button>
+        </div>
+      </div>
+
+    </div>
+    <a href="voos.html" style="display:block;text-align:center;margin-top:20px;font-size:14px;font-weight:700;color:var(--p);">Ver mais voos →</a>
+  </div>
+
+  <!-- Tab: Serviços -->
+  <div class="tab-panel" id="tab-servicos">
+    <div class="chip-row" style="padding:0;margin-bottom:14px;">
+      <button class="chip active" onclick="filterTabChip(this)">Todos</button>
+      <button class="chip" onclick="filterTabChip(this)">🍽️ Gastro</button>
+      <button class="chip" onclick="filterTabChip(this)">🧗 Aventura</button>
+      <button class="chip" onclick="filterTabChip(this)">💆 Spa</button>
+      <button class="chip" onclick="filterTabChip(this)">🏛️ Cultura</button>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">8 serviços disponíveis na região</p>
+    <div class="exp-grid">
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/fondue-campos/400/280" alt="Fondue">
+            <img src="https://picsum.photos/seed/fondue-campos-2/400/280" alt="Fondue">
+            <img src="https://picsum.photos/seed/fondue-campos-3/400/280" alt="Fondue">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat gastro">Gastronomia</div>
+          <h3>Jantar de Fondue Suíço</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.9 · (87)</div>
+          <div class="exp-price">R$ 180 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/trekking-campos/400/280" alt="Trekking">
+            <img src="https://picsum.photos/seed/trekking-campos-2/400/280" alt="Trekking">
+            <img src="https://picsum.photos/seed/trekking-campos-3/400/280" alt="Trekking">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat aventura">Aventura</div>
+          <h3>Trekking Pico do Itapeva</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.8 · (54)</div>
+          <div class="exp-price">R$ 90 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/spa-campos/400/280" alt="Spa">
+            <img src="https://picsum.photos/seed/spa-campos-2/400/280" alt="Spa">
+            <img src="https://picsum.photos/seed/spa-campos-3/400/280" alt="Spa">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat spa">Spa & Bem-estar</div>
+          <h3>Day Spa Completo</h3>
+          <div class="exp-rating"><span class="star">★</span> 5.0 · (42)</div>
+          <div class="exp-price">R$ 350 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/chocolate-campos/400/280" alt="Chocolate">
+            <img src="https://picsum.photos/seed/chocolate-campos-2/400/280" alt="Chocolate">
+            <img src="https://picsum.photos/seed/chocolate-campos-3/400/280" alt="Chocolate">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat gastro">Gastronomia</div>
+          <h3>Tour Chocolateria Artesanal</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.7 · (130)</div>
+          <div class="exp-price">R$ 65 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+    </div>
+    <a href="servicos.html" style="display:block;text-align:center;margin-top:20px;font-size:14px;font-weight:700;color:var(--p);">Ver todos os serviços →</a>
+  </div>
+
+</main>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="roteiros.html" class="bn-item active">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <span>Roteiros</span>
+  </a>
+  <a href="voos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+    </div>
+    <span>Voos</span>
+  </a>
+  <a href="servicos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span>Serviços</span>
+  </a>
+</nav>
+
+<!-- Modal Parceiro Voos -->
+<div class="modal-backdrop" id="modalVoo" onclick="closeModal(event)">
+  <div class="bottom-sheet" onclick="event.stopPropagation()">
+    <div class="bs-handle"></div>
+    <div class="bs-icon">✈️</div>
+    <div class="bs-title">Emissão via parceiro</div>
+    <div class="bs-desc">
+      As passagens aéreas são emitidas pelo nosso parceiro especializado, que cuida de toda a operação e envio das passagens para você.
+    </div>
+    <div class="bs-actions">
+      <button class="btn-whatsapp">💬 Falar com o parceiro</button>
+      <button class="btn-outline" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function initCarousels() {
+  document.querySelectorAll('.cc-track').forEach(track => {
+    const dots = track.closest('.card-carousel').querySelectorAll('.cc-dot');
+    track.addEventListener('scroll', () => {
+      const idx = Math.round(track.scrollLeft / track.offsetWidth);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
+  });
+}
+document.addEventListener('DOMContentLoaded', initCarousels);
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+function filterTabChip(el) {
+  el.closest('.chip-row').querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+function openModal() { document.getElementById('modalVoo').classList.add('open'); }
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modalVoo')) {
+    document.getElementById('modalVoo').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>

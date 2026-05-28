@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "5s-hospedagem",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/syntax/Downloads/Hospedagem/server.py"],
+      "port": 3333
+    }
+  ]
+}

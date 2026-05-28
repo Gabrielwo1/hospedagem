@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Serviços — 5S Hospedagem</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="app-logo">
+    <span class="app-logo-name">Serviços</span>
+    <span class="app-logo-sub">Experiências regionais em até 20km</span>
+  </div>
+  <button class="icon-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  </button>
+  <button class="icon-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+  </button>
+</header>
+
+<main class="app-content">
+
+  <!-- Search pill -->
+  <div style="padding:16px 16px 0;">
+    <div class="search-pill">
+      <span class="sp-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </span>
+      <div class="sp-body">
+        <span class="sp-main">Buscar serviços</span>
+        <span class="sp-sub">Região · Categoria · Data</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categorias -->
+  <div style="padding:16px 0 4px;">
+    <div class="chip-row">
+      <button class="chip active" onclick="filterChip(this)">✨ Todos</button>
+      <button class="chip" onclick="filterChip(this)">🍽️ Gastronomia</button>
+      <button class="chip" onclick="filterChip(this)">🧗 Aventura</button>
+      <button class="chip" onclick="filterChip(this)">💆 Spa & Bem-estar</button>
+      <button class="chip" onclick="filterChip(this)">🏛️ Cultura</button>
+      <button class="chip" onclick="filterChip(this)">🌿 Natureza</button>
+      <button class="chip" onclick="filterChip(this)">🎭 Eventos</button>
+    </div>
+  </div>
+
+  <!-- Em destaque -->
+  <section class="section" style="padding-top:20px;">
+    <div class="section-hd">
+      <span class="section-hd-title">Em destaque</span>
+      <a href="servicos.html" class="section-hd-link">Mapa</a>
+    </div>
+
+    <!-- Card destaque full width -->
+    <a href="servico-detalhe.html">
+    <div class="featured-card">
+      <img src="https://picsum.photos/seed/fondue-featured/800/400" alt="Fondue">
+      <div class="featured-content">
+        <span class="featured-cat">🍽️ Gastronomia</span>
+        <div class="featured-title">Jantar de Fondue Suíço Premium</div>
+        <div class="featured-meta">
+          <div style="color:rgba(255,255,255,.85);font-size:13px;display:flex;align-items:center;gap:4px;">
+            <span style="color:#FF385C;">★</span> 4.9 · (87 avaliações)
+          </div>
+          <div style="color:#fff;font-size:18px;font-weight:900;letter-spacing:-.3px;">R$ 180<span style="font-weight:400;font-size:12px;opacity:.8;"> /pessoa</span></div>
+        </div>
+      </div>
+    </div>
+    </a>
+  </section>
+
+  <!-- Grid 2 colunas -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-hd">
+      <span class="section-hd-title">Mais experiências</span>
+      <a href="servicos.html" class="section-hd-link">Ver todos</a>
+    </div>
+    <div class="exp-grid">
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/trekking-srv/400/300" alt="Trekking">
+            <img src="https://picsum.photos/seed/trekking-2/400/300" alt="Trekking">
+            <img src="https://picsum.photos/seed/trekking-3/400/300" alt="Trekking">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat aventura">Aventura</div>
+          <h3>Trekking Pico do Itapeva</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.8 · (54)</div>
+          <div class="exp-price">R$ 90 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/spa-srv/400/300" alt="Spa">
+            <img src="https://picsum.photos/seed/spa-srv-2/400/300" alt="Spa">
+            <img src="https://picsum.photos/seed/spa-srv-3/400/300" alt="Spa">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat spa">Spa & Bem-estar</div>
+          <h3>Day Spa Completo com Imersão</h3>
+          <div class="exp-rating"><span class="star">★</span> 5.0 · (42)</div>
+          <div class="exp-price">R$ 350 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/chocolate-srv/400/300" alt="Chocolate">
+            <img src="https://picsum.photos/seed/chocolate-2/400/300" alt="Chocolate">
+            <img src="https://picsum.photos/seed/chocolate-3/400/300" alt="Chocolate">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat gastro">Gastronomia</div>
+          <h3>Tour Chocolateria Artesanal</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.7 · (130)</div>
+          <div class="exp-price">R$ 65 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/telefer-srv/400/300" alt="Teleférico">
+            <img src="https://picsum.photos/seed/telefer-2/400/300" alt="Teleférico">
+            <img src="https://picsum.photos/seed/telefer-3/400/300" alt="Teleférico">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat aventura">Aventura</div>
+          <h3>Passeio de Teleférico</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.6 · (210)</div>
+          <div class="exp-price">R$ 45 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/cultura-srv/400/300" alt="Cultura">
+            <img src="https://picsum.photos/seed/cultura-2/400/300" alt="Cultura">
+            <img src="https://picsum.photos/seed/cultura-3/400/300" alt="Cultura">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat cultura">Cultura</div>
+          <h3>Visita ao Palácio Boa Vista</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.5 · (88)</div>
+          <div class="exp-price">R$ 30 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+      <a href="servico-detalhe.html">
+      <div class="exp-card">
+        <div class="card-carousel">
+          <div class="cc-track">
+            <img src="https://picsum.photos/seed/natureza-srv/400/300" alt="Natureza">
+            <img src="https://picsum.photos/seed/natureza-2/400/300" alt="Natureza">
+            <img src="https://picsum.photos/seed/natureza-3/400/300" alt="Natureza">
+          </div>
+          <div class="cc-dots">
+            <span class="cc-dot active"></span><span class="cc-dot"></span><span class="cc-dot"></span>
+          </div>
+          <button class="cc-fav" onclick="event.preventDefault()">♡</button>
+        </div>
+        <div class="exp-body">
+          <div class="exp-cat natureza">Natureza</div>
+          <h3>Observação de Pássaros</h3>
+          <div class="exp-rating"><span class="star">★</span> 4.8 · (36)</div>
+          <div class="exp-price">R$ 120 <span>/ pessoa</span></div>
+        </div>
+      </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Fornecedor CTA -->
+  <section class="section">
+    <div class="cta-banner">
+      <div style="position:relative;z-index:1;display:flex;gap:16px;align-items:center;">
+        <div style="font-size:36px;flex-shrink:0;">🏪</div>
+        <div>
+          <h3 style="font-size:16px;font-weight:800;color:#fff;letter-spacing:-.2px;margin-bottom:6px;">É prestador de serviços?</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,.8);line-height:1.55;margin-bottom:14px;">Cadastre seus serviços e alcance turistas que visitam a região.</p>
+          <button style="background:#fff;color:var(--p);border:none;border-radius:var(--r-full);padding:9px 18px;font-size:13px;font-weight:800;cursor:pointer;">Cadastrar serviço</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="roteiros.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <span>Roteiros</span>
+  </a>
+  <a href="voos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+    </div>
+    <span>Voos</span>
+  </a>
+  <a href="servicos.html" class="bn-item active">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span>Serviços</span>
+  </a>
+</nav>
+
+<script>
+function filterChip(el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+function initCarousels() {
+  document.querySelectorAll('.cc-track').forEach(track => {
+    const dots = track.closest('.card-carousel').querySelectorAll('.cc-dot');
+    track.addEventListener('scroll', () => {
+      const idx = Math.round(track.scrollLeft / track.offsetWidth);
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }, { passive: true });
+  });
+}
+document.addEventListener('DOMContentLoaded', initCarousels);
+</script>
+</body>
+</html>

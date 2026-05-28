@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Resultados de Voos — 5S Hospedagem</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <a href="voos.html" class="icon-btn" style="font-size:18px;color:var(--ink);">←</a>
+  <div style="flex:1;">
+    <div style="font-size:15px;font-weight:800;letter-spacing:-.3px;">PTO → CWB</div>
+    <div style="font-size:11px;color:var(--muted);">15–20 jun · 1 pessoa · Econômica</div>
+  </div>
+  <button class="icon-btn">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+  </button>
+</header>
+
+<main class="app-content">
+
+  <!-- Filtros -->
+  <div class="filter-strip">
+    <div class="chip-row">
+      <button class="chip active" onclick="filterChip(this)">Mais barato</button>
+      <button class="chip" onclick="filterChip(this)">Mais rápido</button>
+      <button class="chip" onclick="filterChip(this)">☀️ Manhã</button>
+      <button class="chip" onclick="filterChip(this)">🌤 Tarde</button>
+      <button class="chip" onclick="filterChip(this)">🌙 Noite</button>
+      <button class="chip" onclick="filterChip(this)">Direto</button>
+    </div>
+  </div>
+
+  <!-- Resumo -->
+  <div style="padding:12px 16px;background:var(--surface-2);border-bottom:1px solid var(--border-2);">
+    <p style="font-size:13px;color:var(--muted);">
+      <strong style="color:var(--ink);">8 voos encontrados</strong> · Pato Branco → Curitiba · 15–20 jun
+    </p>
+  </div>
+
+  <!-- Lista de resultados -->
+  <div class="flight-list" style="padding:16px;">
+
+    <!-- Melhor opção -->
+    <div class="flight-card best" onclick="openModal()">
+      <div class="flight-best-label">Melhor custo-benefício</div>
+      <div class="fl-airline" style="margin-top:10px;">
+        <div class="fl-airline-logo" style="background:var(--p-08);color:var(--p);">AZ</div>
+        <div style="flex:1;">
+          <div class="fl-airline-name">Azul Linhas Aéreas</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:1px;">AD 4100 · Boeing 737</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:10px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:.4px;">por pessoa</div>
+          <div class="fl-price" style="font-size:22px;">R$ 487</div>
+        </div>
+      </div>
+      <div class="fl-route" style="margin:14px 0 10px;">
+        <div style="text-align:left;">
+          <div class="fl-time">07:30</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">PTO</div>
+          <div style="font-size:11px;color:var(--muted);">Pato Branco</div>
+        </div>
+        <div class="fl-mid">
+          <div class="fl-duration">1h 45min</div>
+          <div class="fl-mid-line"></div>
+          <div class="fl-direct">Direto</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="fl-time">09:15</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">CWB</div>
+          <div style="font-size:11px;color:var(--muted);">Curitiba</div>
+        </div>
+      </div>
+      <button class="btn-primary" style="padding:13px;" onclick="event.stopPropagation();openModal()">Selecionar este voo</button>
+    </div>
+
+    <!-- Resultado 2 -->
+    <div class="flight-card" onclick="openModal()">
+      <div class="fl-airline">
+        <div class="fl-airline-logo" style="background:#fff0f0;color:#c00;">LA</div>
+        <div style="flex:1;">
+          <div class="fl-airline-name">LATAM Airlines</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:1px;">JJ 3412 · Airbus A320</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:10px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:.4px;">por pessoa</div>
+          <div class="fl-price" style="font-size:22px;">R$ 612</div>
+        </div>
+      </div>
+      <div class="fl-route" style="margin:14px 0 0;">
+        <div style="text-align:left;">
+          <div class="fl-time">13:50</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">PTO</div>
+        </div>
+        <div class="fl-mid">
+          <div class="fl-duration">2h 20min</div>
+          <div class="fl-mid-line"></div>
+          <div class="fl-stop">1 escala · Londrina</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="fl-time">16:10</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">CWB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado 3 -->
+    <div class="flight-card" onclick="openModal()">
+      <div class="fl-airline">
+        <div class="fl-airline-logo" style="background:#f0fdf4;color:#15803d;">G3</div>
+        <div style="flex:1;">
+          <div class="fl-airline-name">GOL Linhas Aéreas</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:1px;">G3 1087 · Boeing 737 MAX</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:10px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:.4px;">por pessoa</div>
+          <div class="fl-price" style="font-size:22px;">R$ 548</div>
+        </div>
+      </div>
+      <div class="fl-route" style="margin:14px 0 0;">
+        <div style="text-align:left;">
+          <div class="fl-time">06:15</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">PTO</div>
+        </div>
+        <div class="fl-mid">
+          <div class="fl-duration">1h 55min</div>
+          <div class="fl-mid-line"></div>
+          <div class="fl-direct">Direto</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="fl-time">08:10</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">CWB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado 4 -->
+    <div class="flight-card" onclick="openModal()">
+      <div class="fl-airline">
+        <div class="fl-airline-logo" style="background:#fffbeb;color:#b45309;">TP</div>
+        <div style="flex:1;">
+          <div class="fl-airline-name">TAP Air Portugal</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:1px;">TP 4203 · Airbus A319</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-size:10px;font-weight:700;color:var(--subtle);text-transform:uppercase;letter-spacing:.4px;">por pessoa</div>
+          <div class="fl-price" style="font-size:22px;">R$ 834</div>
+        </div>
+      </div>
+      <div class="fl-route" style="margin:14px 0 0;">
+        <div style="text-align:left;">
+          <div class="fl-time">19:40</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">PTO</div>
+        </div>
+        <div class="fl-mid">
+          <div class="fl-duration">3h 10min</div>
+          <div class="fl-mid-line"></div>
+          <div class="fl-stop">1 escala · GRU</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="fl-time">22:50</div>
+          <div style="font-size:12px;font-weight:700;color:var(--ink-3);">CWB</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="roteiros.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <span>Roteiros</span>
+  </a>
+  <a href="voos.html" class="bn-item active">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+    </div>
+    <span>Voos</span>
+  </a>
+  <a href="servicos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span>Serviços</span>
+  </a>
+</nav>
+
+<!-- Modal Parceiro -->
+<div class="modal-backdrop" id="modalVoo" onclick="closeModal(event)">
+  <div class="bottom-sheet" onclick="event.stopPropagation()">
+    <div class="bs-handle"></div>
+    <div class="bs-icon">✈️</div>
+    <div class="bs-title">Emissão via parceiro</div>
+    <div class="bs-desc">
+      As passagens aéreas são emitidas e gerenciadas pelo nosso parceiro especializado. Eles cuidam de toda a operação, emissão e envio das passagens diretamente para você.
+    </div>
+    <div class="bs-actions">
+      <button class="btn-whatsapp">💬 Falar com o parceiro no WhatsApp</button>
+      <button class="btn-outline" onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function filterChip(el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+function openModal() { document.getElementById('modalVoo').classList.add('open'); }
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modalVoo')) {
+    document.getElementById('modalVoo').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>

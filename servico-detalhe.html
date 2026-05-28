@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jantar de Fondue — 5S Hospedagem</title>
+  <link rel="stylesheet" href="_styles.css">
+  <style>
+    /* Sticky footer sits above the bottom nav on this page */
+    .sticky-footer { bottom: calc(var(--nav-h) + var(--safe-b)); }
+    .app-content.no-header { padding-bottom: calc(var(--nav-h) + var(--safe-b) + 76px); }
+  </style>
+</head>
+<body>
+
+<main class="app-content no-header">
+
+  <!-- Gallery Hero -->
+  <div class="gallery" style="height:320px;">
+    <img src="https://picsum.photos/seed/fondue-detail/800/500" alt="Jantar de Fondue">
+    <div class="gallery-actions">
+      <a href="servicos.html" class="gallery-btn">←</a>
+      <div style="display:flex;gap:8px;">
+        <span class="gallery-count">1 / 8</span>
+        <button class="gallery-btn">↗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div style="background:var(--surface);padding:20px 16px 0;">
+
+    <!-- Header -->
+    <div style="margin-bottom:16px;">
+      <span style="background:var(--p-08);color:var(--p);font-size:11px;font-weight:700;padding:4px 10px;border-radius:var(--r-full);letter-spacing:.4px;text-transform:uppercase;">🍽️ Gastronomia</span>
+      <h1 style="font-size:22px;font-weight:900;letter-spacing:-.4px;margin:10px 0 6px;line-height:1.2;">Jantar de Fondue Suíço Premium</h1>
+      <p style="font-size:13px;color:var(--muted);">📍 Capivari, Campos do Jordão · 2,3 km</p>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:flex;align-items:center;gap:0;padding:16px 0;border-top:1px solid var(--border-2);border-bottom:1px solid var(--border-2);margin-bottom:24px;">
+      <div style="flex:1;text-align:center;">
+        <div style="font-size:26px;font-weight:900;color:var(--ink);letter-spacing:-.5px;">4.9</div>
+        <div style="color:#FF385C;font-size:13px;letter-spacing:2px;">★★★★★</div>
+      </div>
+      <div style="width:1px;height:40px;background:var(--border-2);"></div>
+      <div style="flex:1;text-align:center;">
+        <div style="font-size:15px;font-weight:800;color:var(--ink);">87</div>
+        <div style="font-size:12px;color:var(--muted);">avaliações</div>
+      </div>
+      <div style="width:1px;height:40px;background:var(--border-2);"></div>
+      <div style="flex:1;text-align:center;">
+        <div style="font-size:15px;font-weight:800;color:var(--ink);">3h</div>
+        <div style="font-size:12px;color:var(--muted);">duração</div>
+      </div>
+    </div>
+
+    <!-- Sobre -->
+    <h2 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:10px;">Sobre a experiência</h2>
+    <p style="font-size:14px;color:var(--ink-3);line-height:1.75;margin-bottom:12px;">
+      Uma noite inesquecível no coração de Capivari. O jantar de fondue premium combina queijo artesanal suíço, fondue de carne e sobremesa de chocolate belga, servidos em ambiente montanhês com lareira e vista para as colinas.
+    </p>
+    <p style="font-size:14px;color:var(--ink-3);line-height:1.75;margin-bottom:24px;">
+      Acompanha entrada, pão artesanal, saladas e carta de vinhos e cervejas artesanais. Ideal para casais e grupos de até 8 pessoas.
+    </p>
+
+    <!-- O que está incluso -->
+    <h2 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:4px;">O que está incluso</h2>
+    <div style="margin-bottom:24px;">
+      <div class="info-row">
+        <div class="info-icon">🧀</div>
+        <div>
+          <div class="info-label">Entrada</div>
+          <div class="info-value">Fondue de queijo suíço artesanal</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🥩</div>
+        <div>
+          <div class="info-label">Prato principal</div>
+          <div class="info-value">Fondue de carne com 5 molhos especiais</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🍫</div>
+        <div>
+          <div class="info-label">Sobremesa</div>
+          <div class="info-value">Fondue de chocolate belga</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🍷</div>
+        <div>
+          <div class="info-label">Bebida inclusa</div>
+          <div class="info-value">Uma taça de vinho ou cerveja artesanal</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🪵</div>
+        <div>
+          <div class="info-label">Ambiente</div>
+          <div class="info-value">Mesa com lareira privativa</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disponibilidade -->
+    <h2 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:14px;">Disponibilidade</h2>
+    <div class="date-scroll" style="margin-bottom:28px;">
+      <div class="date-chip active" onclick="selectDate(this)">
+        <div class="dc-weekday">SEX</div>
+        <div class="dc-day">27</div>
+        <div class="dc-month">Jun</div>
+      </div>
+      <div class="date-chip" onclick="selectDate(this)">
+        <div class="dc-weekday">SÁB</div>
+        <div class="dc-day">28</div>
+        <div class="dc-month">Jun</div>
+      </div>
+      <div class="date-chip" onclick="selectDate(this)">
+        <div class="dc-weekday">DOM</div>
+        <div class="dc-day">29</div>
+        <div class="dc-month">Jun</div>
+      </div>
+      <div class="date-chip sold">
+        <div class="dc-weekday">SEG</div>
+        <div class="dc-day">30</div>
+        <div class="dc-sold">Lotado</div>
+      </div>
+      <div class="date-chip" onclick="selectDate(this)">
+        <div class="dc-weekday">QUI</div>
+        <div class="dc-day">3</div>
+        <div class="dc-month">Jul</div>
+      </div>
+      <div class="date-chip" onclick="selectDate(this)">
+        <div class="dc-weekday">SEX</div>
+        <div class="dc-day">4</div>
+        <div class="dc-month">Jul</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Fornecedor -->
+  <div style="padding:20px 16px;background:var(--surface);">
+    <h2 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:16px;">Sobre o fornecedor</h2>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:50px;height:50px;background:linear-gradient(135deg,var(--p),#7c3aed);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:800;flex-shrink:0;">R</div>
+      <div style="flex:1;">
+        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:2px;">Restaurante La Fondue</div>
+        <div style="font-size:12px;color:var(--muted);">Membro desde 2023 · 87 avaliações</div>
+      </div>
+      <button style="background:transparent;border:1.5px solid var(--border);border-radius:var(--r-full);padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink-3);cursor:pointer;">Contato</button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Reviews -->
+  <div style="padding:20px 16px 28px;background:var(--surface);">
+    <h2 style="font-size:17px;font-weight:800;letter-spacing:-.2px;margin-bottom:18px;display:flex;align-items:center;gap:8px;">
+      <span style="color:#FF385C;">★</span> 4.9 · 87 avaliações
+    </h2>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:34px;height:34px;background:var(--surface-3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--ink-3);flex-shrink:0;">M</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--ink);">Mariana S.</div>
+            <div style="font-size:11px;color:var(--muted);">Junho 2026 · <span style="color:#FF385C;">★★★★★</span></div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--ink-3);line-height:1.65;">Experiência incrível! O fondue de queijo foi o melhor que já comi. O ambiente é super aconchegante, com lareira e tudo. Super recomendo!</p>
+      </div>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div style="width:34px;height:34px;background:var(--p-08);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--p);flex-shrink:0;">R</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--ink);">Rafael C.</div>
+            <div style="font-size:11px;color:var(--muted);">Maio 2026 · <span style="color:#FF385C;">★★★★★</span></div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--ink-3);line-height:1.65;">Levei minha namorada no aniversário dela. O atendimento foi impecável. O chocolate belga no final é a parte mais gostosa!</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Sticky Footer -->
+<div class="sticky-footer">
+  <div>
+    <div class="sf-price-label">a partir de</div>
+    <div>
+      <span class="sf-price-val">R$ 180</span>
+      <span class="sf-price-per"> / pessoa</span>
+    </div>
+  </div>
+  <button class="btn-reservar" onclick="openModal()">Reservar</button>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="roteiros.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+    </div>
+    <span>Roteiros</span>
+  </a>
+  <a href="voos.html" class="bn-item">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+    </div>
+    <span>Voos</span>
+  </a>
+  <a href="servicos.html" class="bn-item active">
+    <div class="bn-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <span>Serviços</span>
+  </a>
+</nav>
+
+<!-- Modal de reserva -->
+<div class="modal-backdrop" id="modalReserva" onclick="closeModal(event)">
+  <div class="bottom-sheet" onclick="event.stopPropagation()">
+    <div class="bs-handle"></div>
+    <div class="bs-icon">🍽️</div>
+    <div class="bs-title">Confirmar reserva</div>
+    <div style="background:var(--surface-2);border-radius:var(--r-lg);padding:16px;margin-bottom:20px;border:1px solid var(--border-2);">
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:10px;">
+        <span style="color:var(--muted);">Experiência</span>
+        <span style="font-weight:600;color:var(--ink);">Jantar de Fondue</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:10px;">
+        <span style="color:var(--muted);">Data</span>
+        <span style="font-weight:600;color:var(--ink);">27 jun 2026 · 20h</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:10px;">
+        <span style="color:var(--muted);">Pessoas</span>
+        <span style="font-weight:600;color:var(--ink);">2 pessoas</span>
+      </div>
+      <div style="border-top:1px solid var(--border-2);padding-top:12px;margin-top:4px;display:flex;justify-content:space-between;font-size:16px;">
+        <span style="font-weight:700;color:var(--ink);">Total</span>
+        <span style="font-weight:900;color:var(--p);font-size:20px;letter-spacing:-.4px;">R$ 360</span>
+      </div>
+    </div>
+    <div class="bs-actions">
+      <button class="btn-primary" onclick="closeModal()">Confirmar reserva</button>
+      <button class="btn-outline" onclick="closeModal()">Voltar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function selectDate(el) {
+  if (el.classList.contains('sold')) return;
+  document.querySelectorAll('.date-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+function openModal() { document.getElementById('modalReserva').classList.add('open'); }
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modalReserva')) {
+    document.getElementById('modalReserva').classList.remove('open');
+  }
+}
+</script>
+</body>
+</html>
