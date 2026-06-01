@@ -1206,13 +1206,33 @@ input, select, textarea { font-family:inherit; }
 .mb24 { margin-bottom: var(--sp-6); }
 .gap8 { gap: var(--sp-2); }
 
-/* ── Patrocínio / Em Destaque ────────────────────────── */
+/* ── Seção Patrocinada ───────────────────────────────── */
+.spon-section {
+  background: #FFFBEB;
+  border-top: 3px solid #F59E0B;
+  border-bottom: 3px solid #F59E0B;
+  padding: var(--sp-5) 0 0;
+  position: relative;
+}
+.spon-section-hd {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 var(--page-px); margin-bottom: var(--sp-4);
+}
+.spon-section-title {
+  font-size: var(--fs-lg); font-weight: var(--fw-heavy);
+  letter-spacing: var(--ls-tight); color: var(--ink);
+  display: flex; align-items: center; gap: var(--sp-2);
+}
 .patrocinio-badge {
-  font-size: var(--fs-2xs); font-weight: var(--fw-bold);
-  color: var(--subtle); text-transform: uppercase;
-  letter-spacing: var(--ls-wider); background: var(--surface-3);
-  border: 1px solid var(--border); padding: 3px var(--sp-3);
-  border-radius: var(--r-full);
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: var(--fs-2xs); font-weight: var(--fw-heavy);
+  color: #78350F; text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  background: #FEF3C7; border: 1.5px solid #FCD34D;
+  padding: 4px var(--sp-3); border-radius: var(--r-full);
+}
+.patrocinio-badge::before {
+  content: '📢'; font-size: 10px;
 }
 .spon-cat-hd {
   display: flex; justify-content: space-between; align-items: center;
